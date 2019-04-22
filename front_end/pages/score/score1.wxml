@@ -1,0 +1,56 @@
+<!--pages/score/score.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <block wx:if="{{!has_person_info}}">
+            <view>
+                <button class="weui-btn" type="primary" bindtap="goto_index">
+                    huo qu yong hu xing xi.
+                </button>
+            </view>
+        </block>
+        <block wx:else>
+            <view>
+            <view class="weui-cells__title">{{person_info.name}}同学 成绩：</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <block wx:for="{{person_info.subjects}}">
+                        <navigator url="score" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                            <view class="weui-cell__bd">{{item.name}}</view>
+                            <view class="weui-cell__ft weui-cell__ft_in-access">最近一次成绩：{{item.last_score.score}}</view>
+                        </navigator>
+                        <block wx:if="{{index < 1 }}">
+                            <block wx:for="{{subjects_detail[0].score_node}}" wx:for-item="yuwen">
+
+                                    <view class="weui-cell">
+                                        <view class="weui-cell__hd">
+                                            <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                                        </view>
+                                        <view class="weui-cell__bd">{{yuwen.score}}{{yuwen.date.toString}}</view>
+                                        <view class="weui-cell__ft">{{yuwen.dateString}}</view>
+                                    </view>
+    
+                                    
+                            </block>
+                        </block>
+                    </block> 
+                </view>              
+                <view class="weui-flex at-botton">
+                    <view class="weui-flex__item">
+                        <button class="weui-btn mini-btn" type="primary" size="default" bindtap="tap_trend">
+                            各科趋势
+                        </button>
+                    </view>
+                    <view class="weui-flex__item">
+                        <button class="weui-btn mini-btn" type="primary" size="default" bindtap="view_t">
+                            各科对比
+                        </button>
+                    </view>
+                </view>
+            </view>
+            <view class="chart_view">
+                <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ec}}">
+                </ec-canvas>
+
+            </view>
+        </block>
+    </view>
+</view>

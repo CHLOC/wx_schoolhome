@@ -1,0 +1,37 @@
+/*@import "/style/weui.wxss"*/
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #000;
+}
+
+.usermotto {
+  color: #000;
+  margin-top: 20px;
+}
+
+.bc_green {
+  background: #0f0;
+  width:750px;
+  height: 100px;
+}
+.btn_big {
+    margin-top: 10rpx;
+    color: #fff;
+    background-color: #080;
+    border-width: 375rpx;
+    height: 100rpx;
+    align-items: center;
+}

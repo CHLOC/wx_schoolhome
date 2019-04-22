@@ -1,0 +1,6 @@
+/* pages/bbs/bbs.wxss */
+.card_css image {
+    width: 32px;
+    height: 32px
+}
+

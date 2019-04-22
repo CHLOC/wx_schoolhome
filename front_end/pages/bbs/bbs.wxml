@@ -1,0 +1,15 @@
+<!--pages/bbs/bbs.wxml-->
+<view style="margin: 16px">公告栏</view>
+<block wx:for="{{article_list}}" wx:for-index="index" wx:for-item="item">
+    <i-card full title="{{item.title}}" extra="{{item.date}}" thumb="http://192.168.1.75:5000/static/icon_doc.png" i-class="card_css">
+        <view slot="content">作者：{{item.author_name}}</view>
+    </i-card>
+</block>
+<!--
+    <view slot="footer">{{item.author_name}}</view>
+<i-panel class="cell-panel-demo" title="公告栏">
+        <i-cell title="{{item.title}}" value="{{item.date}}">
+            <i-icon type="like_fill" slot="icon" />
+        </i-cell>
+</i-panel>
+-->

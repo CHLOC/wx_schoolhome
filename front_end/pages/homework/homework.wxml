@@ -1,0 +1,25 @@
+<!--pages/homework/homework.wxml-->
+<view class="caption-wrap">
+<i-panel class="cell-panel-demo">
+    <i-cell title="作业内容" is-link value="截止日期"></i-cell>
+</i-panel>
+
+    <block wx:for="{{homework}}" wx:for-index="key" wx:for-item="value">
+        <i-collapse name="{{name}}">
+            <i-collapse-item title="{{value.name}}" name="{{key}}">
+                <block wx:for="{{value.node}}" wx:for-index="index" wx:for-item="entry">
+                    <view slot="content">
+                        <i-panel class="cell-panel-demo">
+                            <i-cell title="{{entry.homework_content}}" label="建议用时:{{entry.time}}分钟" value="{{entry.deadline_date}}"></i-cell>
+                        </i-panel>
+                    </view>
+                </block>
+            </i-collapse-item>
+        </i-collapse>
+    </block>
+</view>
+<!--
+class="cell-panel-demo"
+{{index+1}}:
+    <text class="caption-title">折叠面板</text>
+                        -->

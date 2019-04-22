@@ -1,0 +1,19 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/first_page/first_page",
+        "pages/homework/homework",
+        "pages/score/score",
+        "pages/score/score1",
+        "pages/bbs/bbs"
+
+    ],
+    "window": {
+        "backgroundColor": "#f0f",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    }
+}

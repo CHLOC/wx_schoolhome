@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "bbs",
+    "usingComponents": {
+        "i-cell": "../../dist/cell/index",
+        "i-panel": "../../dist/panel/index",
+        "i-card": "../../dist/card/index"
+    }
+}

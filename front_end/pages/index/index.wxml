@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+    <text class="usermotto">{{person_info.name}}{{motto}}</text>
+</view>
+<block wx:if="{{has_person_info}}">
+    <i-button bind:click="goto_homework" type="success" shape="circle" size="large">作业</i-button>
+    <i-button bind:click="goto_score" type="success" shape="circle" size="large">成绩</i-button>
+    <i-button bind:click="goto_bbs" type="success" shape="circle" size="large">公告栏</i-button>
+</block>
+<block wx:else>
+    <i-button bind:click="wx_login" type="success" shape="circle" size="large">请登陆</i-button>
+</block>
+
